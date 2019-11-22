@@ -97,6 +97,7 @@ const Second = () => {
         src={second}
         alt=""
       />
+      <CommentBox />
     </>
   );
 };
