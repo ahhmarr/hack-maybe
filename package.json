@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@pipedrive/convention-ui-css": "^4.26.2",
+    "@pipedrive/convention-ui-react": "^4.34.0",
+    "axios": "^0.19.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.2.0"
