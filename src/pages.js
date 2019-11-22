@@ -4,7 +4,6 @@ import first from './images/first.png';
 import second from './images/second.png';
 import third from './images/third.png';
 import fourth from './images/fourth.png';
-import fifth from './images/fifth.png';
 import loading from './images/loading.gif';
 
 import axios from 'axios';
@@ -101,18 +100,16 @@ const Second = () => {
     </>
   );
 };
+
 const Third = () => {
   return (
-    <>
-      <img
-        style={{
-          width: '100vw'
-        }}
-        src={third}
-        alt=""
-      />
-      <CommentBox />
-    </>
+    <img
+      style={{
+        width: '100vw'
+      }}
+      src={third}
+      alt=""
+    />
   );
 };
 const Fourth = () => {
@@ -122,17 +119,6 @@ const Fourth = () => {
         width: '100vw'
       }}
       src={fourth}
-      alt=""
-    />
-  );
-};
-const Fifth = () => {
-  return (
-    <img
-      style={{
-        width: '100vw'
-      }}
-      src={fifth}
       alt=""
     />
   );
@@ -159,6 +145,6 @@ const createBundle = async function({ companyId, userId }) {
 
   return pipeline_id;
 };
-const gallery = [First, Second, Third, Fourth, Fifth];
+const gallery = [First, Second, Third, Fourth];
 
 export default gallery;

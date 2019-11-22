@@ -1,8 +1,7 @@
 import React from 'react';
 const style = {
   position: 'absolute',
-  backgroundColor: 'transparent',
-  // backgroundColor: 'rgba(234,121,74,0.1)',
+  backgroundColor: 'rgba(234,121,74,0.1)',
   width: '49vw',
   height: '90vh'
 };
