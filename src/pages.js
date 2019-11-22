@@ -17,6 +17,28 @@ function getUrlParameter(name) {
     ? ''
     : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
+const CommentBox = () => {
+  return (
+    <textarea
+      name=""
+      id=""
+      cols="30"
+      rows="10"
+      style={{
+        position: 'relative',
+        zIndex: '100',
+        bottom: '1463px',
+        left: '346px',
+        height: '123px',
+        width: '1084px',
+        border: 'none',
+        outline: 'none',
+        fontSize: '20px',
+        resize: 'none'
+        // backgroundColor: 'red'
+      }}></textarea>
+  );
+};
 const First = () => {
   return (
     <>
@@ -81,13 +103,16 @@ const Second = () => {
 };
 const Third = () => {
   return (
-    <img
-      style={{
-        width: '100vw'
-      }}
-      src={third}
-      alt=""
-    />
+    <>
+      <img
+        style={{
+          width: '100vw'
+        }}
+        src={third}
+        alt=""
+      />
+      <CommentBox />
+    </>
   );
 };
 const Fourth = () => {
