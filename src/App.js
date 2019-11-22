@@ -1,23 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Prev, Next } from './navigation';
+import gallery from './pages';
 
 function App() {
+  const [index, setIndex] = useState(0);
+  const Comp = gallery[index];
+  const extra = index === 1 ? { top: '300px' } : {};
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{
+        overflow: 'hidden',
+        cursor: 'pointer'
+      }}>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Prev
+          handler={() => {
+            setIndex(prev => {
+              return prev === 0 ? gallery.length - 1 : --prev;
+            });
+          }}
+        />
+        <Next
+          handler={() => {
+            setIndex(prev => {
+              return prev >= gallery.length - 1 ? 0 : ++prev;
+            });
+          }}
+          extra={extra}
+        />
+        <Comp />
       </header>
     </div>
   );
